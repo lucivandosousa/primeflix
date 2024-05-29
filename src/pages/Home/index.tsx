@@ -5,7 +5,7 @@ export default function Home() {
 
   useEffect(() => {
     async function loadMovies() {
-      const response = await api.get("movie/now_playing?", {
+      const response = await api.get("movie/now_playing", {
         params: {
           api_key: import.meta.env.VITE_KEY_API,
           language: "pt-BR"
