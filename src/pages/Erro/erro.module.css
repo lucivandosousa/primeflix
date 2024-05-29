@@ -1,0 +1,23 @@
+.not_found {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.not_found h1 {
+  font-size: 100px;
+}
+
+.link {
+  color: #fff;
+  margin-top: 20px;
+
+}
+
+.link:hover {
+  color: #E50914;
+}
