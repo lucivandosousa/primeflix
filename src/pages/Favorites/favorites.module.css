@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container h1 {
+  color: #E50914;
+}
+
+.list_movies {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.list_movies article {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.list_movies strong {
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 22px;
+  display: block;
+  color: #fff;
+}
+
+.list_movies img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.list_movies a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #116FEB;
+  color: #fff;
+  text-decoration: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.list_movies a:hover {
+  color: #000;
+}
+
+.list_movies button {
+  background-color: #E50914;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.list_movies button:hover {
+  color: #000;
+}
