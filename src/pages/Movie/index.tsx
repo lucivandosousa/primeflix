@@ -39,6 +39,22 @@ export default function Movie() {
 
   }, [id, natigate])
 
+  function favoriteMovie() {
+    const myFavoritesList = localStorage.getItem("prime_flix_favorite")
+
+    let favoritesMovies = JSON.parse(myFavoritesList) || []
+
+    const hasMovie = Array.isArray(favoritesMovies) && favoritesMovies.some((favoriteMovie) => favoriteMovie.id === movie.id)
+
+    if (hasMovie) {
+      alert("O filme já está na sua lista de favoritos!")
+      return
+    }
+
+    localStorage.setItem("prime_flix_favorite", JSON.stringify([...favoritesMovies, movie]))
+    alert("Filme adicionado na sua lista de favoritos!")
+  }
+
   if (loading) {
     return (
       <div className={styles.loading}>
@@ -59,7 +75,7 @@ export default function Movie() {
         <strong>Avaliações: {movie.vote_average}</strong>
 
         <div className={styles.area_buttons}>
-          <button>Salvar</button>
+          <button onClick={favoriteMovie}>Salvar</button>
           <button>
             <a href={`https://www.youtube.com/results?search_query=${movie.title}`} target="_blank" rel="external">Trailer</a>
           </button>
