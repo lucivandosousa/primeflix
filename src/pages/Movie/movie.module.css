@@ -1,0 +1,54 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.movie_details {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 30px auto 0 auto;
+  color: #fff;
+}
+
+.movie_details h1, h3, strong {
+  margin: 20px 0;
+}
+
+.movie_details img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.area_buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.area_buttons button {
+  background-color: #116FEB;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.area_buttons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.area_buttons button:hover {
+  color: #000;
+}
+
+.area_buttons button a:hover {
+  color: #000;
+}
