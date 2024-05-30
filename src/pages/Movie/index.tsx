@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import api from "../../services/api"
 import styles from "./movie.module.css"
+import { toast } from "react-toastify"
 
 interface Movie {
   title: string,
@@ -47,12 +48,12 @@ export default function Movie() {
     const hasMovie = Array.isArray(favoritesMovies) && favoritesMovies.some((favoriteMovie) => favoriteMovie.id === movie.id)
 
     if (hasMovie) {
-      alert("O filme já está na sua lista de favoritos!")
+      toast.warn("O filme já está na sua lista de favoritos!")
       return
     }
 
     localStorage.setItem("prime_flix_favorite", JSON.stringify([...favoritesMovies, movie]))
-    alert("Filme adicionado na sua lista de favoritos!")
+    toast.success("Filme adicionado na sua lista de favoritos!")
   }
 
   if (loading) {

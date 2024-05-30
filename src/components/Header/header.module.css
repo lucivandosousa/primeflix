@@ -19,9 +19,9 @@
 .favoritos {
   background-color: #fff;
   color: #E50914;
-  padding: 20px;
+  padding: 10px;
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s;

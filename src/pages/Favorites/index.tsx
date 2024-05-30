@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./favorites.module.css"
+import { toast } from "react-toastify";
 
 interface Movies {
   id: number;
@@ -29,6 +30,7 @@ export default function Favorites() {
 
     setFavoritesMovies(newList)
     localStorage.setItem("prime_flix_favorite", JSON.stringify(newList))
+    toast.success("O filme foi removido!")
   }
 
   return (
